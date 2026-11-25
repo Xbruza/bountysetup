@@ -1,6 +1,6 @@
 # Template agent review bug bounty
 
-Pakai satu agent untuk menelaah kode yang diizinkan atau menilai draf laporan yang sudah ada. Template ini hanya berisi Markdown. Tidak perlu instalasi, akun platform, konektor, atau model tertentu.
+Agent utama adalah **ORCHESTRATOR**. Ia membagi review antara **RESEARCHER**, **BUILDER**, dan **AUDITOR**, lalu mengembalikan hasil ke pengguna. Pakai runtime yang mendukung delegasi subagent. Template Markdown ini tidak bergantung pada program, platform, atau model tertentu.
 
 ## Pakai di agent lain
 
