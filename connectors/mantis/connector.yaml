@@ -1,6 +1,0 @@
-id: "custom.mantis"
-title: "Mantis"
-description: "Use Mantis through its registered API to find bug bounties, submit and discuss reports, and manage hunter profiles within the user's permissions."
-include_in_prompt: true
-require_auth: true
-aliases: ["Mantis bug bounty", "Mantis MCP"]

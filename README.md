@@ -1,9 +1,11 @@
-# Bounty setup
+# Template agent review bug bounty
 
-Mulai dari [workflow review laporan](WORKFLOW.md) dan [kartu keputusan Auditor](agents/AUDITOR.md). Jalur ini dipakai untuk draf yang sudah ada; tidak perlu API key, browser login, atau akses ke target. Direktori `data/xe/` berisi snapshot historis, bukan daftar lengkap tiket terkini. Driver, connector, dan skill hunting lama tetap tersedia sebagai arsip; bukan bagian dari jalur review.
+Pakai satu agent untuk menelaah kode yang diizinkan atau menilai draf laporan yang sudah ada. Template ini hanya berisi Markdown. Tidak perlu instalasi, akun platform, konektor, atau model tertentu.
 
-## Migrasi dari setup lama
+## Pakai di agent lain
 
-- Nonaktifkan job `xe-bounty-hunter-0800` dan `xe-bounty-hunter-2000` di scheduler yang sudah terpasang. Mengubah file Git tidak mengubah salinan job di server.
-- Ganti salinan `agents/AUDITOR.md`, `agents/ORCHESTRATOR.md`, dan `skills-local/local-bounty-reporting/`. Pertahankan path relatifnya atau berikan isi prosedur Auditor langsung ke reviewer. Jangan gabungkan prompt baru dengan prompt filing lama.
-- Uji dengan satu draf lama yang sudah ditutup. Sembunyikan verdict lama, isi kartu, lalu bandingkan dengan alasan triager. Jangan submit ulang. Dua watcher direktori program tidak diubah.
+1. Salin [AGENTS.md](AGENTS.md) ke workspace privat. Jika agent tidak otomatis membaca file itu, tempel seluruh isinya sebagai instruksi sesi.
+2. Berikan satu kandidat, kutipan kebijakan resmi, versi aset, bukti yang sudah disamarkan, dan tiket pembanding yang boleh dibaca. Isi konteks program saat memakai template, bukan di repo template.
+3. Minta: **“Review kandidat ini dengan AGENTS.md. Kembalikan kartu keputusan dan sebutkan sumber yang belum bisa diperiksa.”** Simpan hasil di workspace privat.
+
+**Cek pemasangan:** berikan kandidat kosong tanpa kebijakan, bukti, dan riwayat tiket. Hasil yang diharapkan: `HOLD`, tiga penilaian `UNKNOWN`, dan daftar bahan yang kurang. Agent tidak boleh mengarang program atau memulai pengujian.
